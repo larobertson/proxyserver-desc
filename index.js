@@ -1,12 +1,11 @@
 const express = require('express')
 const app = express()
-const bodyParser = require ('body-parser')
-const db = require('./database/db.js')
-const seeder = require('./database/seeder.js').seeder;
 
 app.get('/', (req, res) => {
   //db.seed();
-  res.send('database has data')
+  res.send('I am just a proxy to the real services')
 })
+//this could be a proxy server, it needs to ge the request from my services server
+//need to set that up, define an api, which will grab data from the database
 
 app.listen(5000, () => console.log('Server running on port 5000'))
